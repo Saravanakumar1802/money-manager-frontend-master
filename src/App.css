@@ -1,0 +1,65 @@
+.App {
+  font-family: Roboto;
+  text-align: center;
+}
+
+body {
+  background-image: url(./FWall1.jpg);
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.nav-logo-text {
+  font-size: 23px;
+  font-family: 'Satisfy', cursive;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.modal-btn,
+.nav-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.homediv-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.addexp-form,
+.addincome-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 450px;
+  padding: 16px;
+  margin: 16px;
+}
+
+.pop-btn {
+  text-align: right;
+  margin-right: 2%;
+}
+
+.app-bar {
+  background-color: hsl(240deg 4% 13%) !important;
+}
+
+.home-card {
+  padding: 16px;
+  margin: 24px;
+}
+
+.exp-table,
+.inc-table {
+  text-align: center;
+}
