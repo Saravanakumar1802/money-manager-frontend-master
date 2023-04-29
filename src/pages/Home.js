@@ -13,8 +13,7 @@ export function Home() {
                     <PopModal />
                 </div>
                 <Card className="home-card">
-                    <h1>Hi Welcome!!!</h1>
-                    <h2>Money Manager Dashboard</h2>
+                    <h1>Dashboard</h1>
                     <br />
                     <HomeDiv />
                     <br />

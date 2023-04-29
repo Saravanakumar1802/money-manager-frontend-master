@@ -8,14 +8,13 @@ export function AddIncome() {
     const [date, setDate] = useState("");
     const [incdesc, setIncDesc] = useState("");
     const [amount, setAmount] = useState("");
-
     const navigate = useNavigate();
 
     const addIncome = () => {
         const newInc = [{
-            date: date,
             incdesc: incdesc,
-            amount: amount
+            amount: amount,
+            date: date
         }];
         addNewInc(newInc);
     };

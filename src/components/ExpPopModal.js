@@ -23,7 +23,7 @@ export function ExpPopModal() {
 
     return (
         <div>
-            <Button variant='contained' onClick={handleOpen} color="error">View Expenses List</Button>
+            <Button variant='contained' onClick={handleOpen} className='blue-btn'>View Expenses List</Button>
             <Modal
                 open={open}
                 onClose={handleClose}

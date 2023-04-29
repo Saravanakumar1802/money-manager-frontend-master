@@ -33,7 +33,7 @@ export function IncTable() {
 
     return (
         <TableContainer component={Paper} className='inc-table'>
-            <h3>Income Details</h3>
+            <h3>Income History</h3>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead>
                     <TableRow>

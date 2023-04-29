@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import { useNavigate } from 'react-router-dom';
 
+
 const style = {
     position: 'absolute',
     top: '50%',
@@ -24,7 +25,7 @@ export function PopModal() {
 
     return (
         <div>
-            <Button variant='contained' onClick={handleOpen}>Add Income / Expenses</Button>
+            <button className='blue-btn' onClick={handleOpen}>ADD INCOME / EXPENSES</button>
             <Modal
                 open={open}
                 onClose={handleClose}
@@ -33,8 +34,8 @@ export function PopModal() {
             >
                 <Box sx={style}>
                     <div className='modal-btn'>
-                        <Button variant='contained' color='error' onClick={() => navigate('/addexp')}>Add Expenses</Button>
-                        <Button variant='contained' color='success' onClick={() => navigate('/addincome')}>Add Income</Button>
+                        <Button variant='contained' color='error' className='red-btn' onClick={() => navigate('/addexp')}>Add Expenses</Button>
+                        <Button variant='contained' className='green-btn' onClick={() => navigate('/addincome')}>Add Income</Button>
                     </div>
                 </Box>
             </Modal>

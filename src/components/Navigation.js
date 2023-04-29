@@ -1,4 +1,5 @@
-import { AppBar, Button, Toolbar } from "@mui/material";
+import { AppBar, Toolbar } from "@mui/material";
+import DashboardIcon from '@mui/icons-material/Dashboard';
 import { useNavigate } from "react-router-dom";
 import HomeIcon from '@mui/icons-material/Home';
 
@@ -11,12 +12,13 @@ export function Navigation() {
             <AppBar position="static" className="app-bar">
                 <Toolbar className="nav-items">
                     <div className="logo-container" onClick={() => navigate("/")}>
-                        <img src="https://icons-for-free.com/download-icon-india+indian+money+rs+rupee+icon-1320184810832447831_512.png"
-                            alt="logo" width={"40"} height={"40"} /><br />
-                        <span className="nav-logo-text">Money Manager</span>
+                        <img src="https://img.icons8.com/?size=512&id=sPBQkuep9vDA&format=png"
+                            alt="logo" width={"40"} height={"40"} className="img-class" /><br />
+                        <span className="nav-logo-text">Money_Manager App</span>
                     </div>
-                    <div>
-                        <Button color="inherit" onClick={() => navigate("/")}><HomeIcon /></Button>
+                    <div className="nav-icons">
+                        <button color="inherit" className='blue-btn' onClick={() => navigate("/")}><DashboardIcon /></button>
+                        <button color="inherit" className='blue-btn' onClick={() => navigate("/")}><HomeIcon /></button>
                         {/* <Button color="inherit" onClick={() => navigate("/addexp")}>Add Expenses</Button> */}
                     </div>
                 </Toolbar>

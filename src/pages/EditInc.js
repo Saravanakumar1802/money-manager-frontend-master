@@ -12,7 +12,7 @@ export function IncEdit() {
         fetch(`${API}/income/${id}`, { method: "GET" })
             .then((data) => data.json())
             .then((ex) => setInc(ex));
-    }, []);
+    }, [id]);
 
     return (
         <div>

@@ -12,7 +12,7 @@ export function ExpEdit() {
         fetch(`${API}/expenses/${id}`, { method: "GET" })
             .then((data) => data.json())
             .then((ex) => setExp(ex));
-    }, []);
+    }, [id]);
 
     return (
         <div>

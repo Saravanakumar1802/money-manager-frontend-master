@@ -23,7 +23,7 @@ export function IncPopModal() {
 
     return (
         <div>
-            <Button variant='contained' onClick={handleOpen} color="success">View Income List</Button>
+            <Button variant='contained' className='blue-btn' onClick={handleOpen} >View Income List</Button>
             <Modal
                 open={open}
                 onClose={handleClose}

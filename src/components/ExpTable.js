@@ -33,12 +33,12 @@ export function ExpTable() {
 
     return (
         <TableContainer component={Paper} className='exp-table'>
-            <h3>Expenses Details</h3>
+            <h3>Expenses History</h3>
             <Table sx={{ minWidth: 650 }} aria-label="simple table">
                 <TableHead>
                     <TableRow>
                         <TableCell>Date</TableCell>
-                        <TableCell>Expense Description</TableCell>
+                        <TableCell >Expense Description</TableCell>
                         <TableCell>Amount</TableCell>
                         <TableCell>Modify/Delete</TableCell>
                     </TableRow>
