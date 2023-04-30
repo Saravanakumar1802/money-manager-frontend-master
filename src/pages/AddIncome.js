@@ -28,7 +28,7 @@ export function AddIncome() {
     }
 
     return (
-        <div>
+        <div className="edit-card">
             <Card className="addincome-form">
                 <h3>Add Income</h3>
                 <TextField label="" variant="outlined" type={"date"}

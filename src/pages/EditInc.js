@@ -47,23 +47,23 @@ export function EditInc({ inc }) {
     };
 
     return (
-        <div>
-            <Card className="addexp-form">
-                <h2>Edit Income</h2>
-                <TextField label="" variant="outlined" type={"date"}
-                    value={date}
-                    onChange={(event) => setDate(event.target.value)}
-                />
-                <TextField label="Income Description" variant="outlined"
-                    value={incdesc}
-                    onChange={(event) => setIncDesc(event.target.value)}
-                />
-                <TextField label="Enter Amount" variant="outlined"
-                    value={amount}
-                    onChange={(event) => setAmount(event.target.value)}
-                />
-                <Button variant="contained" onClick={editIncome}>Submit</Button>
-            </Card>
+        <div className="edit-card">
+                <Card className="addexp-form ">
+                    <h2>Edit Income</h2>
+                    <TextField label="" variant="outlined" type={"date"}
+                        value={date}
+                        onChange={(event) => setDate(event.target.value)}
+                    />
+                    <TextField label="Income Description" variant="outlined"
+                        value={incdesc}
+                        onChange={(event) => setIncDesc(event.target.value)}
+                    />
+                    <TextField label="Enter Amount" variant="outlined"
+                        value={amount}
+                        onChange={(event) => setAmount(event.target.value)}
+                    />
+                    <Button variant="contained" onClick={editIncome}>Submit</Button>
+                </Card>
         </div>
     )
 }

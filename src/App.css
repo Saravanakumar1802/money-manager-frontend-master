@@ -37,17 +37,17 @@ h1 {
   font-weight: 15px;
   font-family:Arial, Helvetica, sans-serif;
 }
+.edit-card{
+width: 30rem;
+margin: auto;
+}
 h2{
   margin: 3rem 3rem;
+  padding: 0.7rem ;
   background-image: radial-gradient(100% 100% at 100% 0, #aad6a6 0, #60ae4c 100%);
   border-radius: 6px;
   box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
   cursor: pointer;
-}
-@keyframes textclip {
-  to {
-      background-position: 200% center;
-  }
 }
 h1:hover{
   letter-spacing: 2px;

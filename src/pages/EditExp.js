@@ -47,7 +47,7 @@ export function EditExp({ exp }) {
     }
 
     return (
-        <div>
+        <div className="edit-card">
             <Card className="addexp-form">
                 <h2>Edit Expense</h2>
                 <TextField label="" variant="outlined" type={"date"}
