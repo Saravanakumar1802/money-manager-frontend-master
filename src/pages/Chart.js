@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { API } from '../global';
+import { API } from '../Api';
 import {
     Chart as ChartJs,
     CategoryScale,

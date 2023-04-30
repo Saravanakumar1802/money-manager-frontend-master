@@ -1,7 +1,7 @@
 import { Button, Card, TextField } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { API } from '../global';
+import { API } from '../Api';
 
 export function AddExp() {
 
