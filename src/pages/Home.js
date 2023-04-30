@@ -3,7 +3,7 @@ import { Dropdown } from "../components/Dropdown";
 import { ExpPopModal } from "../components/ExpPopModal";
 import { IncPopModal } from "../components/IncPopModal";
 import { PopModal } from "../components/PopModal";
-
+import Chart from "./Chart";
 export function Home() {
     return (
         <div>
@@ -20,6 +20,10 @@ export function Home() {
                     <Dropdown />
                     <br />
                 </Card>
+            </div>
+            <div>
+                <h2>All Transcactions</h2>
+                <Chart/>
             </div>
         </div>
     )

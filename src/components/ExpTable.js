@@ -56,7 +56,7 @@ export function ExpTable() {
                             <TableCell>{row.amount}</TableCell>
                             <TableCell>
                                 <IconButton onClick={() => navigate(`/expenses/edit/${row._id}`)}>
-                                    <EditIcon color='success' />
+                                    <EditIcon color='primary' />
                                 </IconButton>
                                 <IconButton color='error'
                                     onClick={() => deleteExp(row._id)}
