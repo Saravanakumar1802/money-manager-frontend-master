@@ -61,12 +61,13 @@ Button[type="submit"] {
 
 form h3 {
     font-size: 32px;
-    font-weight: 500;
+    font-weight: bold;
     line-height: 42px;
     text-align: center;
     margin-bottom: 3rem;
     letter-spacing: 3px;
     text-transform: uppercase;
+    text-shadow: #080710 2px 3px ;
 }
 
 .background {
