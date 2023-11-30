@@ -6,18 +6,34 @@ import { AddIncome } from './pages/AddIncome';
 import { ExpEdit } from './pages/EditExp';
 import { IncEdit } from './pages/EditInc';
 import { Home } from './pages/Home'
-
+import SignUp from './components/Signup/SignUp'
+import Login from './components/Login/Login'
+import React from 'react'
+// import Main from './components/Main/Main'
+import SendOtp from './components/ForgotPassword/SendOtp'
+import VerifyOtp from './components/ForgotPassword/VerifyOtp'
+import ResetPassword from './components/ForgotPassword/ResetPassword'
+import ProtectRoute from './components/ProtectRoute'
+import { Link } from 'react-router-dom';
 function App() {
 
   return (
     <div className="App">
       <Navigation />
+      
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/addexp' element={<AddExp />} />
-        <Route path='/addincome' element={<AddIncome />} />
-        <Route path='/expenses/edit/:id' element={<ExpEdit />} />
-        <Route path='/income/edit/:id' element={<IncEdit />} />
+        <Route path='/' element={<Login />} />
+        <Route path='/register' element={<SignUp />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/main' element={<ProtectRoute  > <Home /> </ProtectRoute>} />
+        <Route path='/loginhelp' element={<SendOtp />} />
+        <Route path='/loginhelp/otp/:token' element={<VerifyOtp />} />
+        <Route path='/loginhelp/ResetPassword' element={<ResetPassword />} />
+        {/* <Route path='/' element={<Home />} /> */}
+        <Route path='/addexp' element={<ProtectRoute> <AddExp/> </ProtectRoute>} />
+        <Route path='/addincome' element={<ProtectRoute> <AddIncome/> </ProtectRoute>} />
+        <Route path='/expenses/edit/:id' element={<ProtectRoute> <ExpEdit/> </ProtectRoute>} />
+        <Route path='/income/edit/:id' element={<ProtectRoute> <IncEdit/> </ProtectRoute>} />
       </Routes>
     </div>
   );

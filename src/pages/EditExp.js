@@ -23,17 +23,17 @@ export function ExpEdit() {
 
 export function EditExp({ exp }) {
 
-    const [date, setDate] = useState(exp.date);
+    const [date, setDate] = useState(exp.Expdate);
     const [expdesc, setExpDesc] = useState(exp.expdesc);
-    const [amount, setAmount] = useState(exp.amount);
+    const [amount, setAmount] = useState(exp.Expamount);
 
     const navigate = useNavigate();
 
     const editExpense = () => {
         const updatedExp = {
-            date: date,
+            Expdate: date,
             expdesc: expdesc,
-            amount: amount
+            Expamount: amount
         };
         editExp(updatedExp);
     };

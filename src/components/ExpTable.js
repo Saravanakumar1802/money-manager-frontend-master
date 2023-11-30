@@ -11,17 +11,18 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { IconButton } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 export function ExpTable() {
 
     const [expData, setExpData] = useState([]);
     const navigate = useNavigate();
-
+    const val = { email: 'saravanakumar@gmail.com' }
     const getExpenses = () => {
-        fetch(`${API}/expenses`, { method: "GET" })
-            .then((data) => data.json())
-            .then((expenses) => setExpData(expenses));
+
+        axios.get(`${API}/expenses`).then((expenses) => setExpData(expenses.data));
     }
+    console.log(expData);
 
     useEffect(() => getExpenses(), []);
 
@@ -46,14 +47,20 @@ export function ExpTable() {
                 <TableBody>
                     {expData.map((row, index) => (
                         <TableRow
-                            key={index}
+                            // key={index}
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
                             <TableCell component="th" scope="row">
-                                {row.date}
+                            {row.Expdate}
+                            {/* {expData.Expdate} */}
                             </TableCell>
-                            <TableCell>{row.expdesc}</TableCell>
-                            <TableCell>{row.amount}</TableCell>
+                        <TableCell>
+                            {row.expdesc}
+                            {/* {expData.expdesc} */}
+                        </TableCell>
+                        <TableCell>
+                            {row.Expamount}
+                        </TableCell>
                             <TableCell>
                                 <IconButton onClick={() => navigate(`/expenses/edit/${row._id}`)}>
                                     <EditIcon color='primary' />
@@ -63,7 +70,7 @@ export function ExpTable() {
                                 ><DeleteIcon /></IconButton>
                             </TableCell>
                         </TableRow>
-                    ))}
+                     ))} 
                 </TableBody>
             </Table>
         </TableContainer>

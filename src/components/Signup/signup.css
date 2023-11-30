@@ -1,0 +1,22 @@
+#password_email {
+    display: flex !important;
+    /* justify-content: center !important ; */
+    flex-direction: column !important;
+    gap: 1rem !important;
+    /* align-items: center; */
+
+}
+
+#username {
+    min-width: none !important;
+    max-width: none !important;
+    width: 600px !important;
+    margin-left: 40px;
+    height: 80px;
+}
+
+form h1 {
+    line-height: 42px;
+    text-align: center;
+    text-transform: uppercase;
+}

@@ -1,7 +1,7 @@
 import { AppBar, Toolbar } from "@mui/material";
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import { useNavigate } from "react-router-dom";
-import HomeIcon from '@mui/icons-material/Home';
+// import HomeIcon from '@mui/icons-material/Home';
 
 export function Navigation() {
 
@@ -17,8 +17,8 @@ export function Navigation() {
                         <span className="nav-logo-text">Money_Manager App</span>
                     </div>
                     <div className="nav-icons">
-                        <button color="inherit" className='blue-btn' onClick={() => navigate("/")}><DashboardIcon /></button>
-                        <button color="inherit" className='blue-btn' onClick={() => navigate("/")}><HomeIcon /></button>
+                        <button color="inherit" className='blue-btn' ><DashboardIcon /></button>
+                        <button color="inherit" className='blue-btn' onClick={() => navigate(-1)} >🔙</button>
                         {/* <Button color="inherit" onClick={() => navigate("/addexp")}>Add Expenses</Button> */}
                     </div>
                 </Toolbar>

@@ -13,8 +13,8 @@ export function AddIncome() {
     const addIncome = () => {
         const newInc = [{
             incdesc: incdesc,
-            amount: amount,
-            date: date
+            Incamount: amount,
+            Incdate: date
         }];
         addNewInc(newInc);
     };

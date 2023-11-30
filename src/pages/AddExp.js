@@ -13,9 +13,9 @@ export function AddExp() {
 
     const addExpense = () => {
         const newExp = [{
-            date: date,
+            Expdate: date,
             expdesc: expdesc,
-            amount: amount
+            Expamount: amount
         }];
         addNewExp(newExp);
     };

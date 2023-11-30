@@ -31,14 +31,15 @@ export function EditInc({ inc }) {
 
     const editIncome = () => {
         const updatedInc = {
-            date: date,
+            Incdate: date,
             incdesc: incdesc,
-            amount: amount
+            Incamount: amount
         };
         editInc(updatedInc);
     };
 
     const editInc = (updatedInc) => {
+        
         fetch(`${API}/income/${inc._id}`, {
             method: "PUT",
             body: JSON.stringify(updatedInc),
@@ -48,22 +49,22 @@ export function EditInc({ inc }) {
 
     return (
         <div className="edit-card">
-                <Card className="addexp-form ">
-                    <h2>Edit Income</h2>
-                    <TextField label="" variant="outlined" type={"date"}
-                        value={date}
-                        onChange={(event) => setDate(event.target.value)}
-                    />
-                    <TextField label="Income Description" variant="outlined"
-                        value={incdesc}
-                        onChange={(event) => setIncDesc(event.target.value)}
-                    />
-                    <TextField label="Enter Amount" variant="outlined"
-                        value={amount}
-                        onChange={(event) => setAmount(event.target.value)}
-                    />
-                    <Button variant="contained" onClick={editIncome}>Submit</Button>
-                </Card>
+            <Card className="addexp-form ">
+                <h2>Edit Income</h2>
+                <TextField label="" variant="outlined" type={"date"}
+                    value={date}
+                    onChange={(event) => setDate(event.target.value)}
+                />
+                <TextField label="Income Description" variant="outlined"
+                    value={incdesc}
+                    onChange={(event) => setIncDesc(event.target.value)}
+                />
+                <TextField label="Enter Amount" variant="outlined"
+                    value={amount}
+                    onChange={(event) => setAmount(event.target.value)}
+                />
+                <Button variant="contained" onClick={editIncome}>Submit</Button>
+            </Card>
         </div>
     )
 }

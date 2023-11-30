@@ -42,21 +42,21 @@ const Chart = () => {
             .then((ExpenseData) => setExpenseData(ExpenseData));
     }
     useEffect(() => { getIncome() }, [])
-    useEffect(() => { getexpenses() }, [])
+    // useEffect(() => { getexpenses() }, [])
 
 
     const data = {
         labels: IncomeData.map((inc) => {
-            const { date } = inc
-            return date
+            const { Incdate } = inc
+            return Incdate
         }),
         datasets: [
             {
                 label: 'Income',
                 data: [
                     ...IncomeData.map((income) => {
-                        const { amount } = income
-                        return amount
+                        const { Incamount } = income
+                        return Incamount
                     })
                 ],
                 backgroundColor: 'green',
@@ -66,8 +66,8 @@ const Chart = () => {
                 label: 'Expenses',
                 data: [
                     ...ExpenseData.map((expense) => {
-                        const { amount } = expense
-                        return amount
+                        const { Expamount } = expense
+                        return Expamount
                     })
                 ],
                 backgroundColor: 'red',
@@ -92,6 +92,7 @@ const ChartStyled = styled.div`
     width:40rem;
     align-items:center;
     max-width:1200px;
+    min-width:466px
     margin:auto;
 `;
 export default Chart

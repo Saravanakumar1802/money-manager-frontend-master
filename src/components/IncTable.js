@@ -22,7 +22,6 @@ export function IncTable() {
             .then((data) => data.json())
             .then((income) => setIncData(income));
     }
-
     useEffect(() => getIncome(), []);
 
     const deleteInc = (incId) => {
@@ -50,10 +49,10 @@ export function IncTable() {
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
                             <TableCell component="th" scope="row">
-                                {row.date}
+                                {row.Incdate}
                             </TableCell>
                             <TableCell>{row.incdesc}</TableCell>
-                            <TableCell>{row.amount}</TableCell>
+                            <TableCell>{row.Incamount}</TableCell>
                             <TableCell>
                                 <IconButton onClick={() => navigate(`/income/edit/${row._id}`)}>
                                     <EditIcon color='success' />
