@@ -14,7 +14,6 @@ import SendOtp from './components/ForgotPassword/SendOtp'
 import VerifyOtp from './components/ForgotPassword/VerifyOtp'
 import ResetPassword from './components/ForgotPassword/ResetPassword'
 import ProtectRoute from './components/ProtectRoute'
-import { Link } from 'react-router-dom';
 function App() {
 
   return (

@@ -17,7 +17,7 @@ export function ExpTable() {
 
     const [expData, setExpData] = useState([]);
     const navigate = useNavigate();
-    const val = { email: 'saravanakumar@gmail.com' }
+    // const val = { email: 'saravanakumar@gmail.com' }
     const getExpenses = () => {
 
         axios.get(`${API}/expenses`).then((expenses) => setExpData(expenses.data));

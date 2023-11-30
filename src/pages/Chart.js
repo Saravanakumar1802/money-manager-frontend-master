@@ -42,7 +42,7 @@ const Chart = () => {
             .then((ExpenseData) => setExpenseData(ExpenseData));
     }
     useEffect(() => { getIncome() }, [])
-    // useEffect(() => { getexpenses() }, [])
+    useEffect(() => { getexpenses() }, [])
 
 
     const data = {
