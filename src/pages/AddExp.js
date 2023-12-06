@@ -13,6 +13,7 @@ export function AddExp() {
 
     const addExpense = () => {
         const newExp = [{
+            category:"expense",
             Expdate: date,
             expdesc: expdesc,
             Expamount: amount
@@ -25,7 +26,7 @@ export function AddExp() {
             method: "POST",
             body: JSON.stringify(newExp),
             headers: { "Content-type": "application/json" },
-        }).then(() => navigate("/"));
+        }).then(() => navigate("/main"));
     }
 
     return (

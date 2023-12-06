@@ -12,6 +12,7 @@ export function AddIncome() {
 
     const addIncome = () => {
         const newInc = [{
+            category:"income",
             incdesc: incdesc,
             Incamount: amount,
             Incdate: date
@@ -24,7 +25,7 @@ export function AddIncome() {
             method: "POST",
             body: JSON.stringify(newInc),
             headers: { "Content-type": "application/json" },
-        }).then(() => navigate("/"));
+        }).then(() => navigate("/main"));
     }
 
     return (

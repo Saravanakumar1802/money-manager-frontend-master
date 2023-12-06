@@ -22,10 +22,10 @@ export function IncEdit() {
 }
 
 export function EditInc({ inc }) {
-
-    const [date, setDate] = useState(inc.date);
+  
+    const [date, setDate] = useState(inc.Incdate);
     const [incdesc, setIncDesc] = useState(inc.incdesc);
-    const [amount, setAmount] = useState(inc.amount);
+    const [amount, setAmount] = useState(inc.Incamount);
 
     const navigate = useNavigate();
 
@@ -39,12 +39,12 @@ export function EditInc({ inc }) {
     };
 
     const editInc = (updatedInc) => {
-        
+
         fetch(`${API}/income/${inc._id}`, {
             method: "PUT",
             body: JSON.stringify(updatedInc),
             headers: { "Content-type": "application/json" },
-        }).then(() => navigate("/"));
+        }).then(() => navigate("/main"));
     };
 
     return (

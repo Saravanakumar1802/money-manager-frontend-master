@@ -14,7 +14,7 @@ export function Navigation() {
                     <div className="logo-container" onClick={() => navigate("/")}>
                         <img src="https://img.icons8.com/?size=512&id=sPBQkuep9vDA&format=png"
                             alt="logo" width={"40"} height={"40"} className="img-class" /><br />
-                        <span className="nav-logo-text">Money_Manager App</span>
+                        <span className="nav-logo-text">Money_Manager</span>
                     </div>
                     <div className="nav-icons">
                         <button color="inherit" className='blue-btn' ><DashboardIcon /></button>

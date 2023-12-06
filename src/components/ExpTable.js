@@ -22,7 +22,7 @@ export function ExpTable() {
 
         axios.get(`${API}/expenses`).then((expenses) => setExpData(expenses.data));
     }
-    console.log(expData);
+    // console.log(expData);
 
     useEffect(() => getExpenses(), []);
 
@@ -47,7 +47,7 @@ export function ExpTable() {
                 <TableBody>
                     {expData.map((row, index) => (
                         <TableRow
-                            // key={index}
+                            key={index}
                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                         >
                             <TableCell component="th" scope="row">

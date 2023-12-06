@@ -43,7 +43,7 @@ export function EditExp({ exp }) {
             method: "PUT",
             body: JSON.stringify(updatedExp),
             headers: { "Content-type": "application/json" },
-        }).then(() => navigate("/"));
+        }).then(() => navigate("/main"));
     }
 
     return (

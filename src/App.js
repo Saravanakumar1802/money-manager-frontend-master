@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <Navigation />
-      
+
       <Routes>
         <Route path='/' element={<Login />} />
         <Route path='/register' element={<SignUp />} />
@@ -29,10 +29,10 @@ function App() {
         <Route path='/loginhelp/otp/:token' element={<VerifyOtp />} />
         <Route path='/loginhelp/ResetPassword' element={<ResetPassword />} />
         {/* <Route path='/' element={<Home />} /> */}
-        <Route path='/addexp' element={<ProtectRoute> <AddExp/> </ProtectRoute>} />
-        <Route path='/addincome' element={<ProtectRoute> <AddIncome/> </ProtectRoute>} />
-        <Route path='/expenses/edit/:id' element={<ProtectRoute> <ExpEdit/> </ProtectRoute>} />
-        <Route path='/income/edit/:id' element={<ProtectRoute> <IncEdit/> </ProtectRoute>} />
+        <Route path='/addexp' element={<ProtectRoute> <AddExp /> </ProtectRoute>} />
+        <Route path='/addincome' element={<ProtectRoute> <AddIncome /> </ProtectRoute>} />
+        <Route path='/expenses/edit/:id' element={<ProtectRoute> <ExpEdit /> </ProtectRoute>} />
+        <Route path='/income/edit/:id' element={<ProtectRoute> <IncEdit /> </ProtectRoute>} />
       </Routes>
     </div>
   );
